@@ -1,0 +1,26 @@
+@model mvcProyect.Models.Usuario
+
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<h2>Registro de usuario</h2>
+
+<form asp-action="Registro" method="post">
+    <div class="form-group">
+        <label for="Nombre">Nombre</label>
+        <input asp-for="Nombre" class="form-control" required />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="Email">Correo electrónico</label>
+        <input asp-for="Email" class="form-control" required />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="Password">Contraseña</label>
+        <input asp-for="Password" type="password" class="form-control" required />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Registrarse</button>
+</form>

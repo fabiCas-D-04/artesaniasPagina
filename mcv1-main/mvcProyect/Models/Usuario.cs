@@ -4,30 +4,22 @@ namespace mvcProyect.Models
 {
     public class Usuario
     {
+        [Key]
         public int Id { get; set; }
 
+        [Required]
+        [MaxLength(100)]
+        public string Nombre { get; set; }
 
         [Required]
-        [EmailAddress]
+        [MaxLength(100)]
         public string Email { get; set; }
 
-
         [Required]
+        [MaxLength(100)]
         public string Password { get; set; }
 
-        [Required]
-        public string NombreCompleto { get; set; } = string.Empty;
-
-        [Required]
-        public DateTime Fecharegistro { get; set; } = DateTime.Now;
-
-        [Required]
-        public string Rol { get; set; } = "Usuario";
-
-        public DateTime FechaNacimineto { get; set; }
-
-        public bool Activo { get; set; } = true;
-
-
+        [MaxLength(50)]
+        public string Rol { get; set; }
     }
 }

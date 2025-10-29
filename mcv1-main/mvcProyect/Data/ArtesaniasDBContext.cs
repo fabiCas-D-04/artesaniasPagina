@@ -15,6 +15,7 @@ namespace mvcProyect.Data
         public DbSet<DetallePedidoModel> DetallePedidos { get; set; }
         public DbSet<HomeModel> HomeModels { get; set; } // opcional si necesitas scaffolding para Home
         public DbSet<ErrorViewModel> ErrorViewModels { get; set; } // opcional
+        public DbSet<Usuario> Usuarios { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -52,6 +53,5 @@ namespace mvcProyect.Data
                 .Property(p => p.MontoDecimal)
                 .HasColumnType("decimal(18,2)");
         }
-        public DbSet<mvcProyect.Models.Usuario> Usuario { get; set; } = default!;
     }
 }
